@@ -2,7 +2,7 @@
 
 Демо-сайт мебельного магазина: кухни, гостиные, спальни. Сделан по материалам из Instagram клиента.
 
-**Демо:** https://dakaev-mir-mebeli-demo.netlify.app
+**Сайт:** https://imran-php.github.io/dakaev-mir-mebeli/
 
 ## Стек
 Чистый HTML, CSS и JavaScript, без сборки. Изображения в WebP, шрифт Manrope подключён локально.
