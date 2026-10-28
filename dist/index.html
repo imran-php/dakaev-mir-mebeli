@@ -3,49 +3,59 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f4f1">
-  <title>TK DAKAEV | Мир мебели</title>
+  <title>TK DAKAEV, мир мебели</title>
   <meta name="description" content="Мебель для красивой жизни. Спальни, гостиные и кухни TK DAKAEV. Подберите коллекцию и рассчитайте ежемесячный платёж.">
   <link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
 </head>
 <body>
   <header class="header">
-    <a class="brand" href="#home" aria-label="TK DAKAEV, главная"><span class="brand-top">TK <b>DAKAEV</b></span><span class="brand-bottom">МИР МЕБЕЛИ</span></a>
-    <nav aria-label="Основная навигация"><a href="#collection">Коллекции</a><a href="#philosophy">О магазине</a><a href="#installment">Рассрочка</a></nav>
-    <a class="header-contact" href="#visit">Подобрать мебель</a>
-    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">Меню</button>
+    <div class="container header-inner">
+      <a class="brand wordmark" href="#home" aria-label="TK DAKAEV, главная"><span class="brand-top">TK <b>DAKAEV</b></span><span class="brand-bottom">МИР МЕБЕЛИ</span></a>
+      <nav aria-label="Основная навигация"><a href="#collection">Коллекции</a><a href="#philosophy">О магазине</a><a href="#installment">Рассрочка</a></nav>
+      <a class="header-contact" href="#visit">Подобрать мебель</a>
+      <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false">Меню</button>
+    </div>
   </header>
   <main>
     <section class="hero" id="home">
-      <div class="hero-copy"><p class="eyebrow">ТК DAKAEV · ГОЙТЫ</p><h1>Красиво жить.<br><span>Каждый день.</span></h1><p class="hero-description">Мебель, с которой дом становится вашим любимым местом.</p><a class="button primary" href="#collection">Найти свою коллекцию</a></div>
       <div class="hero-photo"><img src="assets/hero.webp" alt="Современная гостиная с мягким диваном и выразительной деревянной мебелью" fetchpriority="high" width="1600" height="1000"></div>
-      <div class="hero-bottom"><span>Ваша история начинается дома</span><span>Спальни / Гостиные / Кухни</span></div>
-    </section>
-    <section class="collection section" id="collection">
-      <div class="section-title"><p class="eyebrow">МЕБЕЛЬ С ХАРАКТЕРОМ</p><h2>Пространство для жизни</h2><p>Подберите настроение для каждой комнаты.</p></div>
-      <div class="catalog-toolbar"><div class="tabs" role="tablist" aria-label="Категории мебели"><button role="tab" id="tab-living" aria-controls="products" aria-selected="true" data-category="living">Гостиные <span>04</span></button><button role="tab" id="tab-bedroom" aria-controls="products" aria-selected="false" data-category="bedroom" tabindex="-1">Спальни <span>04</span></button><button role="tab" id="tab-kitchen" aria-controls="products" aria-selected="false" data-category="kitchen" tabindex="-1">Кухни <span>04</span></button></div><span class="catalog-count">Четыре взгляда на уют</span></div>
-      <div class="products" id="products" role="tabpanel" aria-labelledby="tab-living"></div>
-      <p class="catalog-note">Концептуальные коллекции и примерные цены. Платёж в карточках рассчитан на 12 месяцев с первым взносом 30%.</p>
-    </section>
-    <section class="philosophy section" id="philosophy">
-      <div class="philosophy-photo"><img src="assets/bedroom-2.webp" alt="Светлая спальня с мягкими фактурами и мебелью с рельефными фасадами" loading="lazy" width="1200" height="900"></div>
-      <div class="philosophy-copy"><h2>Дом начинается<br>с ощущения.</h2><p>С мягкого света. С любимого кресла. С большого стола, за которым собираются близкие.</p><p>Мы помогаем найти мебель, которая впишется в вашу жизнь. В ассортименте магазина представлены российские и турецкие производители.</p><div class="philosophy-signature"><span>TK <b>DAKAEV</b></span><p>Роскошь без переплат</p></div></div>
-    </section>
-    <section class="installment section" id="installment">
-      <div class="installment-intro"><p class="eyebrow">РАССРОЧКА БЕЗ БАНКА</p><h2>Любимая мебель.<br><span>Удобный платёж.</span></h2><p>Посмотрите, как покупка может вписаться в ваш ежемесячный бюджет.</p><div class="installment-image"><img src="assets/living-2.webp" alt="Модульный диван в уютной гостиной" loading="lazy" width="1200" height="900"></div></div>
-      <div class="calculator">
-        <h3>Рассчитайте свой вариант</h3>
-        <label class="input-label" for="calc-product">Коллекция</label><select id="calc-product"></select>
-        <div class="field-head"><label for="price">Стоимость мебели</label><span>₽</span></div><input type="number" id="price" min="1000" max="10000000" step="1000" value="189000" inputmode="numeric">
-        <div class="field-head"><label for="deposit">Первый взнос</label><output id="deposit-value" for="deposit">30%</output></div><input type="range" id="deposit" min="0" max="80" step="5" value="30"><div class="range-labels"><span>0%</span><span id="deposit-rubles">56 700 ₽</span><span>80%</span></div>
-        <fieldset class="term"><legend>Срок рассрочки</legend><div class="term-options"><label><input type="radio" name="months" value="3"><span>3 мес.</span></label><label><input type="radio" name="months" value="6"><span>6 мес.</span></label><label><input type="radio" name="months" value="12" checked><span>12 мес.</span></label></div></fieldset>
-        <div class="payment"><span>Ежемесячный платёж</span><div><output id="monthly" aria-live="polite">11 025</output><span> ₽ / мес.</span></div><div class="payment-details"><span>Остаток к оплате</span><output id="balance">132 300 ₽</output></div></div>
-        <p class="calc-note">Предварительный расчёт без наценки. Сроки, первый взнос и итоговую стоимость рассрочки подтверждает магазин.</p>
-        <a class="button primary calculator-cta" href="https://www.instagram.com/dakaev_mir_mebeli/?hl=ru" target="_blank" rel="noopener">Обсудить условия в Instagram</a>
+      <div class="container hero-inner">
+        <div class="hero-copy"><h1>Красиво жить.<br><span>Каждый день.</span></h1><p class="lead hero-description">Мебель, с которой дом становится вашим любимым местом.</p><a class="button primary" href="#collection">Найти свою коллекцию</a></div>
+        <div class="hero-bottom"><span>Мебельный магазин <span class="wordmark">TK DAKAEV</span>, Гойты</span><span>Спальни, гостиные, кухни</span></div>
       </div>
     </section>
-    <section class="visit section" id="visit"><h2>Найдём мебель,<br>в которой <span>есть вы.</span></h2><div><p>Посмотрите коллекции вживую.<br>Мебельный магазин TK DAKAEV, Гойты.</p><a class="button outline" href="https://www.instagram.com/dakaev_mir_mebeli/?hl=ru" target="_blank" rel="noopener">Связаться с магазином</a></div></section>
+    <section class="collection section" id="collection">
+      <div class="container">
+        <div class="section-title"><h2>Пространство для жизни</h2><p class="lead">Подберите настроение для каждой комнаты.</p></div>
+        <div class="catalog-toolbar"><div class="tabs" role="tablist" aria-label="Категории мебели"><button role="tab" type="button" id="tab-living" aria-controls="products" aria-selected="true" data-category="living">Гостиные <span>4</span></button><button role="tab" type="button" id="tab-bedroom" aria-controls="products" aria-selected="false" data-category="bedroom" tabindex="-1">Спальни <span>4</span></button><button role="tab" type="button" id="tab-kitchen" aria-controls="products" aria-selected="false" data-category="kitchen" tabindex="-1">Кухни <span>4</span></button></div><span class="catalog-count">Четыре взгляда на уют</span></div>
+        <div class="products" id="products" role="tabpanel" aria-labelledby="tab-living"></div>
+        <p class="catalog-note">Концептуальные коллекции и примерные цены. Платёж в карточках рассчитан на 12 месяцев с первым взносом 30%.</p>
+      </div>
+    </section>
+    <section class="philosophy section" id="philosophy">
+      <div class="container philosophy-inner">
+        <div class="philosophy-photo"><img src="assets/bedroom-2.webp" alt="Светлая спальня с мягкими фактурами и мебелью с рельефными фасадами" loading="lazy" width="1200" height="900"></div>
+        <div class="philosophy-copy"><h2>Дом начинается с ощущения.</h2><p class="lead">С мягкого света. С любимого кресла. С большого стола, за которым собираются близкие.</p><p>Мы помогаем найти мебель, которая впишется в вашу жизнь. В ассортименте магазина представлены российские и турецкие производители.</p><div class="philosophy-signature"><span class="wordmark">TK <b>DAKAEV</b></span><p>Роскошь без переплат</p></div></div>
+      </div>
+    </section>
+    <section class="installment section" id="installment">
+      <div class="container installment-inner">
+        <div class="installment-intro"><h2>Любимая мебель.<br><span>Удобный платёж.</span></h2><p class="lead">Рассрочка без банка. Посмотрите, как покупка может вписаться в ваш ежемесячный бюджет.</p><div class="installment-image"><img src="assets/living-2.webp" alt="Модульный диван в уютной гостиной" loading="lazy" width="1200" height="900"></div></div>
+        <div class="calculator">
+          <h3>Рассчитайте свой вариант</h3>
+          <label class="input-label" for="calc-product">Коллекция</label><select id="calc-product"></select>
+          <div class="field-head"><label for="price">Стоимость мебели</label><span>₽</span></div><input type="number" id="price" min="1000" max="10000000" step="1000" value="189000" inputmode="numeric">
+          <div class="field-head"><label for="deposit">Первый взнос</label><output id="deposit-value" for="deposit">30%</output></div><input type="range" id="deposit" min="0" max="80" step="5" value="30"><div class="range-labels"><span>0%</span><span id="deposit-rubles">56 700 ₽</span><span>80%</span></div>
+          <fieldset class="term"><legend>Срок рассрочки</legend><div class="term-options"><label><input type="radio" name="months" value="3"><span>3 мес.</span></label><label><input type="radio" name="months" value="6"><span>6 мес.</span></label><label><input type="radio" name="months" value="12" checked><span>12 мес.</span></label></div></fieldset>
+          <div class="payment"><span>Ежемесячный платёж</span><div><output id="monthly" aria-live="polite">11 025</output><span> ₽ / мес.</span></div><div class="payment-details"><span>Остаток к оплате</span><output id="balance">132 300 ₽</output></div></div>
+          <p class="calc-note">Предварительный расчёт без наценки. Сроки, первый взнос и итоговую стоимость рассрочки подтверждает магазин.</p>
+          <a class="button primary calculator-cta" href="https://www.instagram.com/dakaev_mir_mebeli/?hl=ru" target="_blank" rel="noopener">Обсудить условия в Instagram</a>
+        </div>
+      </div>
+    </section>
+    <section class="visit section" id="visit"><div class="container visit-inner"><h2>Найдём мебель, в которой есть вы.</h2><div><p class="lead">Посмотрите коллекции вживую. Мебельный магазин <span class="wordmark">TK DAKAEV</span>, Гойты.</p><a class="button outline" href="https://www.instagram.com/dakaev_mir_mebeli/?hl=ru" target="_blank" rel="noopener">Связаться с магазином</a></div></div></section>
   </main>
-  <footer><a class="brand" href="#home"><img class="brand-logo" src="assets/logo.jpg" alt="TK DAKAEV, торговая компания" width="150" height="150"></a><span>Вещи, которые становятся частью дома.</span><a href="https://www.instagram.com/dakaev_mir_mebeli/?hl=ru" target="_blank" rel="noopener">Instagram</a></footer>
-  <dialog id="product-dialog"><button class="dialog-close" aria-label="Закрыть карточку">Закрыть</button><img id="dialog-image" src="" alt="" width="1200" height="900"><div class="dialog-body"><p id="dialog-category"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="dialog-bottom"><span id="dialog-price"></span><button class="button primary" id="dialog-calculate">Рассчитать рассрочку</button></div><p class="dialog-note">Концептуальная модель. Состав, размеры и стоимость уточняются у магазина.</p></div></dialog>
+  <footer><div class="container footer-inner"><a class="brand" href="#home"><img class="brand-logo" src="assets/logo.jpg" alt="TK DAKAEV, торговая компания" width="150" height="150"></a><span>Вещи, которые становятся частью дома.</span><a class="footer-link" href="https://www.instagram.com/dakaev_mir_mebeli/?hl=ru" target="_blank" rel="noopener">Instagram</a></div></footer>
+  <dialog id="product-dialog" aria-labelledby="dialog-title"><button class="dialog-close" type="button" aria-label="Закрыть карточку">Закрыть</button><img id="dialog-image" src="assets/living-1.webp" alt="" width="1200" height="900"><div class="dialog-body"><p id="dialog-category"></p><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="dialog-bottom"><span id="dialog-price"></span><button class="button primary" type="button" id="dialog-calculate">Рассчитать рассрочку</button></div><p class="dialog-note">Концептуальная модель. Состав, размеры и стоимость уточняются у магазина.</p></div></dialog>
 </body>
 </html>
